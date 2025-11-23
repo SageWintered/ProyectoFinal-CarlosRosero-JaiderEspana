@@ -1,0 +1,34 @@
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 25px 40px;
+    background: white;
+    gap: 50vw;
+}
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.logo img {
+    height: 60px;
+}
+
+.logo h1 {
+    margin: 0;
+    font-size: 28px;
+    font-weight: bold;
+    color: rgb(200, 0, 0);
+}
+.admin-container {
+    width: 100%;
+    text-align: center;
+    margin-top: 40px;
+}
+.acciones {
+    display: flex;
+    justify-content: center;
+    gap: 20vw;
+}

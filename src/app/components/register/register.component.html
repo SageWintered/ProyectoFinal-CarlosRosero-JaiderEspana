@@ -1,0 +1,18 @@
+<div class="p-fluid">
+    <form [formGroup]="registroForm" (ngSubmit)="onSubmit()">
+      <div class="p-field">
+        <label for="nombre">Nombre</label>
+        <input id="nombre" type="text" pInputText formControlName="nombre" />
+        <small *ngIf="registroForm.controls['nombre'].touched && registroForm.controls['nombre'].invalid" class="p-error">El nombre es obligatorio</small>
+      </div>
+  
+      <div class="p-field">
+        <label for="email">Correo Electrónico</label>
+        <input id="email" type="email" pInputText formControlName="email" />
+        <small *ngIf="registroForm.controls['email'].touched && registroForm.controls['email'].invalid" class="p-error">Correo electrónico no válido</small>
+      </div>
+  
+      <button style="background-color: blueviolet;" pButton type="submit" label="Registrarse" [disabled]="registroForm.invalid"></button>
+    </form>
+  </div>
+  

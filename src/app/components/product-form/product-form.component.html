@@ -1,0 +1,43 @@
+<div class="p-fluid form-container">
+    <h2>Agregar Producto</h2>
+
+    <form [formGroup]="productForm" (ngSubmit)="onSubmit()">
+
+        <div class="p-field">
+            <label>Nombre del producto</label>
+            <input type="text" pInputText formControlName="nombre" />
+        </div>
+
+        <div class="p-field">
+            <label>Cantidad</label>
+            <input type="number" pInputText formControlName="cantidad" />
+        </div>
+
+        <div class="p-field">
+            <label>Precio</label>
+            <input type="number" pInputText formControlName="precio" />
+        </div>
+
+        <div class="p-field">
+            <label>Origen</label>
+            <p-dropdown 
+                [options]="origenes" 
+                formControlName="origen"
+                placeholder="Seleccione el origen">
+            </p-dropdown>
+        </div>
+
+        <div class="p-field">
+            <label>Descripción</label>
+            <textarea pInputTextarea rows="3" formControlName="descripcion"></textarea>
+        </div>
+
+        <button 
+            pButton 
+            type="submit" 
+            label="Guardar"
+            [disabled]="productForm.invalid"
+            severity="help">
+        </button>
+    </form>
+</div>
