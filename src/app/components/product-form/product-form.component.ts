@@ -2,9 +2,10 @@ import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators, ReactiveFormsModule } from '@angular/forms';
 import { InputTextModule } from 'primeng/inputtext';
 import { DropdownModule } from 'primeng/dropdown';
-import { CalendarModule } from 'primeng/calendar';
 import { InputTextareaModule } from 'primeng/inputtextarea';
 import { ButtonModule } from 'primeng/button';
+import { CardModule } from 'primeng/card';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-product-form',
@@ -13,9 +14,10 @@ import { ButtonModule } from 'primeng/button';
     ReactiveFormsModule,
     InputTextModule,
     DropdownModule,
-    CalendarModule,
     InputTextareaModule,
-    ButtonModule
+    ButtonModule,
+    CardModule,
+    CommonModule
   ],
   templateUrl: './product-form.component.html',
   styleUrl: './product-form.component.css'
@@ -39,8 +41,7 @@ export class ProductFormComponent implements OnInit {
       cantidad: [null, [Validators.required, Validators.min(1)]],
       precio: [null, [Validators.required, Validators.min(1)]],
       origen: ['', Validators.required],
-      descripcion: [''],
-      imagen: [''] 
+      descripcion: ['']
     });
   }
 

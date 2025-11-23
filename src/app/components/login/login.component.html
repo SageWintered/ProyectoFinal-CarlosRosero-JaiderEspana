@@ -1,39 +1,39 @@
-<form [formGroup] = "myForm" (ngSubmit)="onSubmit()">
-
+<form [formGroup]="myForm" (ngSubmit)="onSubmit()">
+  <p-card header="Login" [style]="{ width: '360px' }">
     
-        <p-card header="Login" [style]="{width:'360px'}">
-            
-            <div class="field">
-                <input 
-                type="text" 
-                pInputText
-                formControlName="usuario"
-                class="w-full"
-                name="usuario"
-                placeholder="Nombre de usuario"/>                       
-                               
+    <div class="field">
+      <input
+        type="text"
+        pInputText
+        formControlName="usuario"
+        class="w-full"
+        name="usuario"
+        placeholder="Nombre de usuario"
+      />
+    </div>
 
-            </div>
+    <div class="field">
+      <input
+        type="password"
+        pInputText
+        formControlName="password"
+        class="w-full"
+        name="password"
+        placeholder="Contraseña"
+      />
+    </div>
 
-            <div class="field">
-                <input 
-                type="password" 
-                pInputPassword
-                formControlName="password"
-                class="w-full"
-                name="password"
-                placeholder="Contraseña"/>                                  
-                               
+    <p-button
+      type="submit"
+      label="Iniciar sesión"
+      styleClass="w-full"
+      severity="help">
+    </p-button>
 
-            </div>
-            <p-button type="submit" label="Iniciar sesion" styleClass="w-full" severity="help"></p-button>
-            <div class="mt-2">No estas registrado? <a routerLink="/register">Registrarme</a></div>
-
+    <div class="mt-2">
+      ¿No estás registrado?
+      <a routerLink="/register">Registrarme</a>
+    </div>
 
   </p-card>
- 
-
 </form>
-
-
-

@@ -1,40 +1,49 @@
-<div class="edit-container">
-  <h2>Editar Producto</h2>
+<div class="page-wrapper">
+  <p-card class="edit-card">
+    <div class="inner-container">
+      
+      <h2 class="title">Editar Producto</h2>
 
-  <form [formGroup]="editForm" (ngSubmit)="onSubmit()">
+      <form [formGroup]="editForm" (ngSubmit)="onSubmit()" class="form">
 
-    <div class="form-group">
-      <label>Nombre:</label>
-      <input type="text" formControlName="name" />
+        <div class="form-group">
+          <label>Nombre:</label>
+          <input pInputText type="text" formControlName="name" />
+        </div>
+
+        <div class="form-group">
+          <label>Precio:</label>
+          <input pInputText type="number" formControlName="price" />
+        </div>
+
+        <div class="form-group">
+          <label>Categoría:</label>
+          <p-dropdown 
+            [options]="categories"
+            optionLabel="label"
+            optionValue="value"
+            formControlName="category">
+          </p-dropdown>
+        </div>
+
+        <div class="form-group">
+          <label>Imagen (URL):</label>
+          <input pInputText type="text" formControlName="img" />
+        </div>
+
+        <div class="preview">
+          <p>Vista previa:</p>
+          <img [src]="editForm.value.img" alt="Vista previa" />
+        </div>
+
+        <button pButton 
+                type="submit" 
+                label="Actualizar" 
+                class="update-btn">
+        </button>
+
+      </form>
+
     </div>
-
-    <div class="form-group">
-      <label>Precio:</label>
-      <input type="number" formControlName="price" />
-    </div>
-
-    <div class="form-group">
-      <label>Categoría:</label>
-      <select formControlName="category">
-        <option *ngFor="let c of categories" [value]="c.value">
-          {{ c.label }}
-        </option>
-      </select>
-    </div>
-
-    <div class="form-group">
-      <label>Imagen (URL):</label>
-      <input type="text" formControlName="img" />
-    </div>
-
-    <div class="preview">
-      <p>Vista previa:</p>
-      <img [src]="editForm.value.img" alt="Vista previa del producto" />
-    </div>
-
-    <button type="submit" class="update-btn">
-      Actualizar
-    </button>
-
-  </form>
+  </p-card>
 </div>

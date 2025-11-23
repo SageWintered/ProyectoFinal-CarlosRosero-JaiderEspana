@@ -1,18 +1,64 @@
-<div class="p-fluid">
-    <form [formGroup]="registroForm" (ngSubmit)="onSubmit()">
-      <div class="p-field">
-        <label for="nombre">Nombre</label>
-        <input id="nombre" type="text" pInputText formControlName="nombre" />
-        <small *ngIf="registroForm.controls['nombre'].touched && registroForm.controls['nombre'].invalid" class="p-error">El nombre es obligatorio</small>
-      </div>
-  
-      <div class="p-field">
-        <label for="email">Correo Electrónico</label>
-        <input id="email" type="email" pInputText formControlName="email" />
-        <small *ngIf="registroForm.controls['email'].touched && registroForm.controls['email'].invalid" class="p-error">Correo electrónico no válido</small>
-      </div>
-  
-      <button style="background-color: blueviolet;" pButton type="submit" label="Registrarse" [disabled]="registroForm.invalid"></button>
-    </form>
-  </div>
-  
+<form [formGroup]="registroForm" (ngSubmit)="onSubmit()">
+  <p-card header="Crear Cuenta" [style]="{ width: '420px' }">
+
+    <!-- Nombre -->
+    <div class="p-field">
+      <label for="nombre">Nombre</label>
+      <input id="nombre" type="text" pInputText formControlName="nombre" class="w-full" />
+      <small *ngIf="registroForm.controls['nombre'].touched && registroForm.controls['nombre'].invalid" class="p-error">
+        El nombre es obligatorio
+      </small>
+    </div>
+
+    <!-- Usuario -->
+    <div class="p-field">
+      <label for="usuario">Nombre de Usuario</label>
+      <input id="usuario" type="text" pInputText formControlName="usuario" class="w-full" />
+      <small *ngIf="registroForm.controls['usuario'].touched && registroForm.controls['usuario'].invalid" class="p-error">
+        El usuario es obligatorio
+      </small>
+    </div>
+
+    <!-- Email -->
+    <div class="p-field">
+      <label for="email">Correo Electrónico</label>
+      <input id="email" type="email" pInputText formControlName="email" class="w-full" />
+      <small *ngIf="registroForm.controls['email'].touched && registroForm.controls['email'].invalid" class="p-error">
+        Correo electrónico no válido
+      </small>
+    </div>
+
+    <!-- Contraseña -->
+    <div class="p-field">
+      <label for="password">Contraseña</label>
+      <input id="password" type="password" pInputText formControlName="password" class="w-full" />
+      <small *ngIf="registroForm.controls['password'].touched && registroForm.controls['password'].invalid" class="p-error">
+        La contraseña debe tener mínimo 6 caracteres
+      </small>
+    </div>
+
+    <!-- Confirmar contraseña -->
+    <div class="p-field">
+      <label for="confirmPassword">Confirmar Contraseña</label>
+      <input id="confirmPassword" type="password" pInputText formControlName="confirmPassword" class="w-full" />
+      <small *ngIf="registroForm.errors?.['passwordMismatch'] && registroForm.controls['confirmPassword'].touched" class="p-error">
+        Las contraseñas no coinciden
+      </small>
+    </div>
+
+    <!-- Botón -->
+    <p-button 
+      type="submit"
+      label="Registrarse"
+      styleClass="w-full"
+      severity="help"
+      [disabled]="registroForm.invalid">
+    </p-button>
+
+    <div class="mt-2">
+      ¿Ya tienes cuenta?
+      <a routerLink="/login">Iniciar sesión</a>
+    </div>
+
+  </p-card>
+</form>
