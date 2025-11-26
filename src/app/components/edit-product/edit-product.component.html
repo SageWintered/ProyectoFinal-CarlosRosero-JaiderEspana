@@ -1,29 +1,34 @@
 <div class="page-wrapper">
   <p-card class="edit-card">
+    <button 
+      routerLink="/bodega" 
+      style="margin-bottom: 15px; padding: 6px 12px; border-radius: 6px; border: none; background: #444; color: white; cursor: pointer;">
+      ← Volver
+    </button>
     <div class="inner-container">
-      
+
       <h2 class="title">Editar Producto</h2>
 
       <form [formGroup]="editForm" (ngSubmit)="onSubmit()" class="form">
 
         <div class="form-group">
           <label>Nombre:</label>
-          <input pInputText type="text" formControlName="name" />
+          <input pInputText type="text" formControlName="producto" />
         </div>
 
         <div class="form-group">
           <label>Precio:</label>
-          <input pInputText type="number" formControlName="price" />
+          <input pInputText type="number" formControlName="precio" />
         </div>
 
         <div class="form-group">
-          <label>Categoría:</label>
-          <p-dropdown 
-            [options]="categories"
-            optionLabel="label"
-            optionValue="value"
-            formControlName="category">
-          </p-dropdown>
+          <label>Cantidad:</label>
+          <input pInputText type="number" formControlName="cantidad" />
+        </div>
+
+        <div class="form-group">
+          <label>Origen:</label>
+          <input pInputText type="text" formControlName="origen" />
         </div>
 
         <div class="form-group">
@@ -36,11 +41,7 @@
           <img [src]="editForm.value.img" alt="Vista previa" />
         </div>
 
-        <button pButton 
-                type="submit" 
-                label="Actualizar" 
-                class="update-btn">
-        </button>
+        <button pButton type="submit" label="Actualizar" class="update-btn"></button>
 
       </form>
 

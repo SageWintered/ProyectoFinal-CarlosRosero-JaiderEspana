@@ -1,0 +1,101 @@
+/* --- FONDO GENERAL --- */
+body, :host {
+  background-color: #0d0d0d; 
+  color: #e8e8e8;
+}
+
+.welcome, .subtitle {
+  text-align: center;
+  color: #b985ff;
+}
+
+/* --- HEADER --- */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 40px;
+  background-color: #0d0d0d;
+  border-bottom: 2px solid #6a0dad;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.logo h1 {
+  color: #d90000;
+  margin: 0;
+}
+
+.actions a {
+  color: #b985ff;
+  margin-left: 15px;
+  text-decoration: none;
+  transition: 0.2s;
+}
+
+.actions a:hover {
+  color: #d3b4ff;
+}
+
+/* --- BOTÓN (PrimeNG) --- */
+#boton button {
+  background-color: #a855f7 !important;
+  border: none !important;
+}
+
+#boton button:hover {
+  background-color: #9333ea !important;
+}
+
+/* --- SECCIÓN DE PRODUCTOS --- */
+.product-list-container {
+  padding: 40px;
+  max-width: 2000px;
+}
+
+h2 {
+  color: white;
+}
+
+/* --- GRID DE PRODUCTOS --- */
+.products-grid {
+  display: grid;
+  max-width: 1900px;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+}
+
+/* --- TARJETAS --- */
+.product-card {
+  background-color: #141414;
+  border: 1px solid #262626;
+  border-radius: 16px;
+  padding: 20px;
+  text-align: center;
+  transition: 0.3s;
+  box-shadow: 0px 0px 10px rgba(106, 0, 173, 0.2);
+}
+
+.product-card:hover {
+  transform: scale(1.03);
+  border-color: #6a0dad;
+  box-shadow: 0px 0px 15px rgba(106, 0, 173, 0.4);
+}
+
+/* --- IMÁGENES DE PRODUCTOS --- */
+.product-card img {
+  width: 80%;
+  height: auto;
+  border-radius: 10px;
+  margin-bottom: 15px;
+}
+.product-list-container {
+  width: 100%;
+  max-width: 1200px;   /* si quieres un límite */
+  margin: 0 auto;
+  padding: 40px;
+}

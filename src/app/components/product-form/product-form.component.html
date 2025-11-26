@@ -1,3 +1,10 @@
+<!-- Botón Volver -->
+<button 
+  routerLink="/adminCenter" 
+  style="margin-bottom: 15px; padding: 6px 12px; border-radius: 6px; border: none; background: #444; color: white; cursor: pointer;">
+  ← Volver
+</button>
+
 <p-card header="Agregar Producto" [style]="{ width: '480px', margin: '0 auto' }">
 
   <form [formGroup]="productForm" (ngSubmit)="onSubmit()" class="p-fluid">
@@ -6,9 +13,7 @@
     <div class="p-field">
       <label>Nombre del producto</label>
       <input type="text" pInputText formControlName="nombre" />
-
-      <small *ngIf="productForm.controls['nombre'].touched && productForm.controls['nombre'].invalid"
-             class="p-error">
+      <small *ngIf="productForm.controls['nombre'].touched && productForm.controls['nombre'].invalid" class="p-error">
         El nombre es obligatorio
       </small>
     </div>
@@ -17,14 +22,10 @@
     <div class="p-field">
       <label>Cantidad</label>
       <input type="number" pInputText formControlName="cantidad" />
-
-      <small *ngIf="productForm.controls['cantidad'].touched && productForm.controls['cantidad'].hasError('required')" 
-             class="p-error">
+      <small *ngIf="productForm.controls['cantidad'].touched && productForm.controls['cantidad'].hasError('required')" class="p-error">
         La cantidad es obligatoria
       </small>
-
-      <small *ngIf="productForm.controls['cantidad'].touched && productForm.controls['cantidad'].hasError('min')" 
-             class="p-error">
+      <small *ngIf="productForm.controls['cantidad'].touched && productForm.controls['cantidad'].hasError('min')" class="p-error">
         La cantidad debe ser mayor a 0
       </small>
     </div>
@@ -33,14 +34,10 @@
     <div class="p-field">
       <label>Precio</label>
       <input type="number" pInputText formControlName="precio" />
-
-      <small *ngIf="productForm.controls['precio'].touched && productForm.controls['precio'].hasError('required')" 
-             class="p-error">
+      <small *ngIf="productForm.controls['precio'].touched && productForm.controls['precio'].hasError('required')" class="p-error">
         El precio es obligatorio
       </small>
-
-      <small *ngIf="productForm.controls['precio'].touched && productForm.controls['precio'].hasError('min')" 
-             class="p-error">
+      <small *ngIf="productForm.controls['precio'].touched && productForm.controls['precio'].hasError('min')" class="p-error">
         El precio debe ser mayor a 0
       </small>
     </div>
@@ -53,17 +50,18 @@
         formControlName="origen"
         placeholder="Seleccione el origen">
       </p-dropdown>
-
-      <small *ngIf="productForm.controls['origen'].touched && productForm.controls['origen'].invalid"
-             class="p-error">
+      <small *ngIf="productForm.controls['origen'].touched && productForm.controls['origen'].invalid" class="p-error">
         Debes seleccionar un origen
       </small>
     </div>
 
-    <!-- Descripción -->
+    <!-- Imagen (URL) -->
     <div class="p-field">
-      <label>Descripción</label>
-      <textarea pInputTextarea rows="3" formControlName="descripcion"></textarea>
+      <label>Imagen (URL)</label>
+      <input type="text" pInputText formControlName="imagen" />
+      <small *ngIf="productForm.controls['imagen'].touched && productForm.controls['imagen'].invalid" class="p-error">
+        Debes ingresar una URL de imagen
+      </small>
     </div>
 
     <p-button 

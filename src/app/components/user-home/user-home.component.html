@@ -1,0 +1,21 @@
+<div class="user-home-container">
+
+  <h2 class="welcome">Bienvenido {{ username }}</h2>
+  <p class="subtitle">Explora nuestros productos disponibles</p>
+
+  <div class="products-grid">
+
+    <div class="card product-card" *ngFor="let p of products">
+      
+      <img class="product-img" [src]="p.img" alt="{{ p.producto }}">
+
+      <h3>{{ p.producto }}</h3>
+
+      <p><strong>Precio:</strong> ${{ p.precio }}</p>
+      <p><strong>Origen:</strong> {{ p.origen }}</p>
+
+    </div>
+
+  </div>
+
+</div>

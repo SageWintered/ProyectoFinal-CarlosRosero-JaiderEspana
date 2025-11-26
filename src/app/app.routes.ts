@@ -7,6 +7,7 @@ import { AdmCenterComponent } from './components/adm-center/adm-center.component
 import { ProductFormComponent } from './components/product-form/product-form.component';
 import { EditProductComponent } from './components/edit-product/edit-product.component';
 import { BodegaComponent } from './components/bodega/bodega.component';
+import { UserHomeComponent } from './components/user-home/user-home.component';
 
 
 export const routes: Routes = [
@@ -52,14 +53,15 @@ export const routes: Routes = [
     path: 'bodega',
     component: BodegaComponent
 },
+
+{
+    path: 'userHome',
+    component: UserHomeComponent
+},
+
 {
 path: '', redirectTo: 'home', pathMatch: 'full'
 },
-
-
-
-   
-
 
 
 ];

@@ -1,15 +1,6 @@
 <form [formGroup]="registroForm" (ngSubmit)="onSubmit()">
   <p-card header="Crear Cuenta" [style]="{ width: '420px' }">
 
-    <!-- Nombre -->
-    <div class="p-field">
-      <label for="nombre">Nombre</label>
-      <input id="nombre" type="text" pInputText formControlName="nombre" class="w-full" />
-      <small *ngIf="registroForm.controls['nombre'].touched && registroForm.controls['nombre'].invalid" class="p-error">
-        El nombre es obligatorio
-      </small>
-    </div>
-
     <!-- Usuario -->
     <div class="p-field">
       <label for="usuario">Nombre de Usuario</label>
@@ -54,6 +45,11 @@
       severity="help"
       [disabled]="registroForm.invalid">
     </p-button>
+
+    <!-- 🔥 mensaje de error -->
+    <p *ngIf="registerError" class="p-error mt-2">
+      {{ registerError }}
+    </p>
 
     <div class="mt-2">
       ¿Ya tienes cuenta?

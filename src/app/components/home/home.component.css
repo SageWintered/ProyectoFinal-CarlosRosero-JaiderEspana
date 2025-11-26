@@ -46,43 +46,16 @@ body, :host {
   background-color: #9333ea !important;
 }
 
-/* --- SECCIÓN DE PRODUCTOS --- */
-.product-list-container {
-  padding: 40px;
+/* --- MENSAJE (nuevo estilo acorde a la página) --- */
+.home-message {
+  display: flex;
+  justify-content: center;
+  margin-top: 60px;
 }
 
-h2 {
-  color: white;
-}
-
-/* --- GRID DE PRODUCTOS --- */
-.products-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-  gap: 30px;
-}
-
-/* --- TARJETAS --- */
-.product-card {
-  background-color: #141414; /* negro suave para contraste */
-  border: 1px solid #262626;
-  border-radius: 16px;
-  padding: 20px;
-  text-align: center;
-  transition: 0.3s;
-  box-shadow: 0px 0px 10px rgba(106, 0, 173, 0.2);
-}
-
-.product-card:hover {
-  transform: scale(1.03);
-  border-color: #6a0dad;
-  box-shadow: 0px 0px 15px rgba(106, 0, 173, 0.4);
-}
-
-/* --- IMÁGENES DE PRODUCTOS --- */
-.product-card img {
-  width: 80%;
-  height: auto;
-  border-radius: 10px;
-  margin-bottom: 15px;
+.home-message h2 {
+  font-size: 2rem;
+  color: #b985ff;    /* Morado claro */
+  font-weight: 600;
+  text-shadow: 0px 0px 10px rgba(106, 0, 173, 0.5);
 }
