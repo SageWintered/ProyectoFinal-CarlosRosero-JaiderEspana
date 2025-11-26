@@ -1,4 +1,3 @@
-<!-- Botón Volver -->
 <button 
   routerLink="/adminCenter" 
   style="margin-bottom: 15px; padding: 6px 12px; border-radius: 6px; border: none; background: #444; color: white; cursor: pointer;">
@@ -9,7 +8,6 @@
 
   <form [formGroup]="productForm" (ngSubmit)="onSubmit()" class="p-fluid">
 
-    <!-- Nombre -->
     <div class="p-field">
       <label>Nombre del producto</label>
       <input type="text" pInputText formControlName="nombre" />
@@ -18,7 +16,6 @@
       </small>
     </div>
 
-    <!-- Cantidad -->
     <div class="p-field">
       <label>Cantidad</label>
       <input type="number" pInputText formControlName="cantidad" />
@@ -30,7 +27,6 @@
       </small>
     </div>
 
-    <!-- Precio -->
     <div class="p-field">
       <label>Precio</label>
       <input type="number" pInputText formControlName="precio" />
@@ -42,7 +38,6 @@
       </small>
     </div>
 
-    <!-- Origen -->
     <div class="p-field">
       <label>Origen</label>
       <p-dropdown 
@@ -55,7 +50,6 @@
       </small>
     </div>
 
-    <!-- Imagen (URL) -->
     <div class="p-field">
       <label>Imagen (URL)</label>
       <input type="text" pInputText formControlName="imagen" />

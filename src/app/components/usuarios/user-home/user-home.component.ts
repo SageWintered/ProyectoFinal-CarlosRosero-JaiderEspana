@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { CardModule } from 'primeng/card';
-import { ProductService } from '../../services/product.service';
+import { ProductService } from '../../../services/product.service';
 
 @Component({
   selector: 'app-user-home',

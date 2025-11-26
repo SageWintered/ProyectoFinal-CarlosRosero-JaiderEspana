@@ -5,7 +5,7 @@ import { ButtonModule } from 'primeng/button';
 import { CardModule } from 'primeng/card';
 import { InputTextModule } from 'primeng/inputtext';
 import { CommonModule } from '@angular/common';
-import { LoginService } from '../../services/login.service';
+import { LoginService } from '../../../services/login.service';
 
 @Component({
   selector: 'app-login',

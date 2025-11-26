@@ -6,7 +6,7 @@ import { InputTextareaModule } from 'primeng/inputtextarea';
 import { ButtonModule } from 'primeng/button';
 import { CardModule } from 'primeng/card';
 import { CommonModule } from '@angular/common';
-import { ProductService } from '../../services/product.service';
+import { ProductService } from '../../../services/product.service';
 import { Router, RouterModule } from '@angular/router';
 
 @Component({

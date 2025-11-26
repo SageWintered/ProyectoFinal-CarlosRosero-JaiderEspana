@@ -5,7 +5,7 @@ import { Router, RouterModule } from '@angular/router';
 import { ButtonModule } from 'primeng/button';
 import { InputTextModule } from 'primeng/inputtext';
 import { CardModule } from 'primeng/card';
-import { LoginService } from '../../services/login.service';
+import { LoginService } from '../../../services/login.service';
 
 @Component({
   selector: 'app-register',

@@ -1,7 +1,6 @@
 <form [formGroup]="registroForm" (ngSubmit)="onSubmit()">
   <p-card header="Crear Cuenta" [style]="{ width: '420px' }">
 
-    <!-- Usuario -->
     <div class="p-field">
       <label for="usuario">Nombre de Usuario</label>
       <input id="usuario" type="text" pInputText formControlName="usuario" class="w-full" />
@@ -10,7 +9,7 @@
       </small>
     </div>
 
-    <!-- Email -->
+
     <div class="p-field">
       <label for="email">Correo Electrónico</label>
       <input id="email" type="email" pInputText formControlName="email" class="w-full" />
@@ -19,7 +18,6 @@
       </small>
     </div>
 
-    <!-- Contraseña -->
     <div class="p-field">
       <label for="password">Contraseña</label>
       <input id="password" type="password" pInputText formControlName="password" class="w-full" />
@@ -28,7 +26,6 @@
       </small>
     </div>
 
-    <!-- Confirmar contraseña -->
     <div class="p-field">
       <label for="confirmPassword">Confirmar Contraseña</label>
       <input id="confirmPassword" type="password" pInputText formControlName="confirmPassword" class="w-full" />
@@ -37,7 +34,6 @@
       </small>
     </div>
 
-    <!-- Botón -->
     <p-button 
       type="submit"
       label="Registrarse"
@@ -46,7 +42,6 @@
       [disabled]="registroForm.invalid">
     </p-button>
 
-    <!-- 🔥 mensaje de error -->
     <p *ngIf="registerError" class="p-error mt-2">
       {{ registerError }}
     </p>

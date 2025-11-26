@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { ButtonModule } from 'primeng/button';
 import { RouterModule } from '@angular/router';
 import { CommonModule } from '@angular/common';
-import { ProductService } from '../../services/product.service';
+import { ProductService } from '../../../services/product.service';
 
 @Component({
   selector: 'app-bodega',

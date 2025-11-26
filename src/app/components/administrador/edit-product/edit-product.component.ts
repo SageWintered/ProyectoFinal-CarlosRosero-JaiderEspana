@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Router, RouterModule, ActivatedRoute } from '@angular/router';
 import { FormBuilder, FormGroup, Validators, ReactiveFormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
-import { ProductService } from '../../services/product.service';
+import { ProductService } from '../../../services/product.service';
 
 // PrimeNG
 import { InputTextModule } from 'primeng/inputtext';
