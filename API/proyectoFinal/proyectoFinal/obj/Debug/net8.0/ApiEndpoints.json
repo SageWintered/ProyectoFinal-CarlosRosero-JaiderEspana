@@ -88,7 +88,7 @@
     "Parameters": [
       {
         "Name": "user",
-        "Type": "proyectoFinal.Controllers.User",
+        "Type": "proyectoFinal.User",
         "IsRequired": true
       }
     ],

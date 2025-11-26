@@ -30,7 +30,6 @@ namespace proyectoFinal.Controllers
     {
       using var connection = new SqlConnection(_connectionString);
 
-      // --- VALIDAR QUE EL USERNAME NO EXISTA ---
       string sqlCheckUser = "SELECT COUNT(*) FROM usuarios WHERE username = @Username";
       int exists = connection.ExecuteScalar<int>(sqlCheckUser, new { user.Username });
 
@@ -39,11 +38,9 @@ namespace proyectoFinal.Controllers
         return BadRequest(new { message = "El nombre de usuario ya está registrado" });
       }
 
-      // 1. Obtener siguiente ID disponible
       string sqlNextId = "SELECT ISNULL(MAX(id), 0) + 1 FROM usuarios";
       int nextId = connection.ExecuteScalar<int>(sqlNextId);
 
-      // 2. Insertar usuario
       string sqlInsert = @"INSERT INTO usuarios (Id, username, password, email, rol)
                          VALUES (@Id, @Username, @Password, @Email, @Rol)";
 
@@ -61,14 +58,5 @@ namespace proyectoFinal.Controllers
 
 
 
-  }
-
-  public class User
-  {
-    public int Id { get; set; }
-    public string Username { get; set; } = "";
-    public string Password { get; set; } = "";
-    public string Email { get; set; } = "";
-    public string Rol { get; set; } = "";
   }
 }

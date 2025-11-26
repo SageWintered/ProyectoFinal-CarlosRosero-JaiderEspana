@@ -7,6 +7,6 @@ namespace proyectoFinal.Models
     public int Cantidad { get; set; }
     public decimal Precio { get; set; }
     public string Origen { get; set; } = "";
-    public string Img { get; set; }
+    public string Img { get; set; } = "";
   }
 }
